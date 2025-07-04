@@ -1,0 +1,78 @@
+/* ProjectCards.css */
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards to next line */
+  justify-content: center; /* Center the cards in the container */
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container in the viewport */
+  padding: 0 20px; /* Add padding to the left and right of the container */
+  margin-bottom:30px;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Spacing between cards */
+  padding: 15px; /* Padding inside the card */
+  width: calc(33.33% - 20px); /* Set width to allow 3 cards per row, adjusting for margins */
+  box-sizing: border-box; /* Include padding and border in the width */
+  display: flex; /* Use flexbox for inner layout */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: space-between; /* Distribute space between items */
+}
+
+.project-image {
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Limit the max width of the image */
+  border-radius: 5px; /* Rounded corners for the image */
+  margin: 0 auto 10px; /* Center the image and add space below */
+}
+
+.projecttitle {
+  font-size: 1.6em; /* Font size for the title */
+  margin: 10px 0; /* Margin around the title */
+  text-align: center; /* Center the title text */
+  font-weight: bold;
+}
+
+.projectoverview {
+  font-size: 1.1em; /* Font size for the overview text */
+  color: #666; /* Color for the overview text */
+  text-align: center; /* Center the overview text */
+  flex-grow: 1; /* Allow the overview to take up remaining space */
+}
+
+.read-more-button {
+  background-color: black;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    border: 2px solid white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.read-more-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transform: translateY(-5px); /* Add a hover lift effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 20px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: calc(100% - 20px); /* One card per row on small screens */
+  }
+}

@@ -1,0 +1,74 @@
+.carousel-control-prev, .carousel-control-next {
+  width: 50px; /* Set width to reduce button size */
+  height: 50px; /* Set height to reduce button size */
+  background-color: rgba(177, 184, 179, 0.5); /* Set a background color */
+  border-radius: 50%; /* Make the button circular */
+  top: 50%; /* Align the button vertically */
+  transform: translateY(-50%); /* Adjust button to center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 20px; /* Set icon width */
+  height: 20px; /* Set icon height */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(126, 124, 124, 0.8); /* Darken background on hover */
+}
+
+/* Initially hide the carousel */
+.carousel-container {
+  opacity: 0;
+  transition: opacity 2s ease-out; /* Smooth transition for fade-in */
+  background-image: url('../../assets/serviceimg.png'); /* Replace with your image URL */
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  padding: 40px 0; /* Optional: Add padding for better spacing */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Animation when visible */
+.carousel-container.visible {
+  opacity: 1;
+}
+
+.servicetext{
+font-weight: bold;
+color: black;
+font-size: 1.25rem;
+}
+.servicedescription{
+color: black;
+font-size: 1.25rem;
+}
+
+.servicebackground{
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Cover the top */
+  left: 0; /* Cover the left */
+  right: 0; /* Cover the right */
+  bottom: 0; /* Cover the bottom */
+  background-image: url('../../assets/serviceimg.png'); /* Ensure the correct path to your image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s forwards; /* Fade in animation */
+
+}
+.servicediv{
+margin-top: 20px;
+font-weight: bold;
+font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+.servicediv  {
+  font-size: 2rem; /* Smaller font on smaller screens */
+}
+
+}

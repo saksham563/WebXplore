@@ -1,0 +1,234 @@
+/* Importing a Google Font (or you can use your custom font) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Styling and animation for the welcome text */
+.welcome-text {
+  font-size: 80px; /* Increase the font size */
+  color: #333;
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add padding for left alignment */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif; /* Apply the imported font */
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column; /* Stack each word vertically */
+  gap: 10px; /* Spacing between words */
+  margin-bottom: -60px;
+}
+
+/* Individual word animations */
+.word-1, .word-2, .word-3, .word-4 {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 0.8s forwards ease-in-out;
+}
+
+/* Animation delays for each word */
+.word-2 {
+  animation-delay: 0.5s;
+}
+
+.word-3 {
+  animation-delay: 1s;
+}
+
+.word-4 {
+  animation-delay: 1.5s;
+}
+
+/* Keyframe animation for fade and slide-up effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust text size for smaller screens */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 40px; /* Adjust for medium screen sizes */
+  }
+}
+
+@media (max-width: 468px) {
+  .welcome-text {
+    font-size: 30px; /* Smaller font size for small screens */
+  }
+}
+
+/* Ensures the video only covers the first section */
+.cont {
+  width: 100%;
+  height: 75vh; /* 75% of the viewport height */
+  position: relative;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+/* Container for video */
+.heading-containers {
+  width: 100%;
+  height: 100%; /* Take full height of the parent div */
+  position: relative;
+}
+
+/* Video styling to cover the div */
+.vid {
+  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Text that appears after scrolling */
+.scroll-text {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+}
+/* This section will come after the video */
+.portfolioimg {
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.project-title {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+/* Styling for the content following the video */
+.our-projects-content {
+  padding: 50px 0;
+}
+
+.project-title {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  outline: none;
+  /* border: 2px solid red; */
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* Optional: Keeps a red border */
+  transition: all 0.3s ease;
+}
+
+.btn:focus,
+.btn:active,
+.btn.focus,
+.btn.active {
+  background-color: black; /* Keep background red on click */
+  color: white; /* Keep text white on click */
+  /* border-color: red;      Keep border red */
+  box-shadow: none; /* Remove the blue shadow */
+  outline: none; /* Remove the outline */
+}
+
+/* Background image styling for portfolio section */
+.portfolioimg {
+  /* position: absolute; */
+  top: 0; /* Cover the top */
+  left: 0; /* Cover the left */
+  right: 0; /* Cover the right */
+  bottom: 0;
+  width: 100%; /* Make sure the width covers the full container */
+  height: 100%; /* Make sure the height covers the full container */
+  background-image: url("../../assets/projectback.png"); /* Ensure the correct path to your image */
+  background-size: cover; /* This ensures the image stretches to cover the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s forwards; /* Fade in animation */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Additional styling for portfolio background image */
+.port {
+  top: 0; /* Cover the top */
+  left: 0; /* Cover the left */
+  right: 0; /* Cover the right */
+  bottom: 0;
+  width: 100%; /* Make sure the width covers the full container */
+  height: 100%; /* Make sure the height covers the full container */
+  background-image: url("../../assets/port.png"); /* Ensure the correct path to your image */
+  background-size: cover; /* This ensures the image stretches to cover the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s forwards; /* Fade in animation */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+@media (max-width: 768px) {
+  .port {
+    background-size: contain; /* Adjusts for smaller screens */
+    background-position: top center;
+  }
+}
+
+.ptagtext {
+  width: 60%; /* Default width */
+  color: black;
+}
+
+.headingport {
+  font-size: 40px; /* Default font size */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+@media (max-width: 468px) {
+  .port {
+    background-image: none;
+  }
+  .ptagtext {
+    width: 100%; /* Full width on small screens */
+    max-width: 100%; /* Ensure it does not exceed the container */
+  }
+
+  .headingport {
+    font-size: 20px; /* Smaller font size for small screens */
+  }
+}
+
+/* Keyframes for fading in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

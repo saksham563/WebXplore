@@ -1,0 +1,64 @@
+/* FAQ Section Styles */
+.faq-section {
+    background: linear-gradient(120deg, #1a1a1d, #4e4e50);
+    color: #fff;
+    min-height: 100vh;
+    padding: 50px 0;
+  }
+  
+  .faq-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+  }
+  
+  .faq-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d9d9d9;
+  }
+  
+  .faq-accordion .accordion-item {
+    background: #333340;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .faq-accordion .accordion-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-accordion .accordion-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .faq-accordion .faq-question {
+    color: #f0f0f0;
+  }
+  
+  .faq-accordion .faq-answer {
+    color: #d9d9d9;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  
+  .faq-accordion .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .faq-accordion .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

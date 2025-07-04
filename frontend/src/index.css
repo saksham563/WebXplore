@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Reset any default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; /* Ensure no default margin */
+  padding: 0; /* Ensure no padding */
+}
+
+html, body {
+  height: 100%;
+}

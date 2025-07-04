@@ -1,0 +1,71 @@
+.sitemap-container {
+    padding: 20px;
+    background-color: #000; /* Black background for the page */
+    color: #fff; /* White text color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    max-width: 800px; /* Maximum width */
+    margin: auto; /* Center the container */
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.sitemap-container h1{
+  color: white;
+}
+  
+  .sitemap-section {
+    margin-bottom: 20px; /* Space between sections */
+  }
+  
+  .sitemap-section h2 {
+    font-size: 1.5rem; /* Section title size */
+    margin-bottom: 10px; /* Space below title */
+    color: #fff; /* White color for section titles */
+  }
+  
+  .list-unstyled {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .list-unstyled li {
+    margin-bottom: 5px; /* Space between list items */
+  }
+  
+  .list-unstyled li a {
+    color: #ccc; /* Light gray color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.2s; /* Smooth color transition */
+  }
+  
+  .list-unstyled li a:hover {
+    color: #fff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sitemap-container {
+      padding: 15px; /* Reduced padding for smaller screens */
+    }
+  
+    .sitemap-section h2 {
+      font-size: 1.25rem; /* Smaller section title size */
+    }
+  
+    .list-unstyled li {
+      margin-bottom: 8px; /* Increased space for better touch targets */
+    }
+  
+    .list-unstyled li a {
+      font-size: 0.9rem; /* Slightly smaller font size for links */
+    }
+  }
+  .heading{
+    text-decoration: none;
+  }
+.he{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}

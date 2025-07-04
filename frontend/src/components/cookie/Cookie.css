@@ -1,0 +1,15 @@
+
+  
+  @media (max-width: 600px) {
+    .react-cookie-consent {
+      padding: 10px; /* Adjust padding for smaller screens */
+      font-size: 12px; /* Reduce font size for better fit */
+      text-align: center; /* Center text on small screens */
+    }
+  
+    .react-cookie-consent button {
+      font-size: 12px; /* Reduce button font size */
+      padding: 8px 12px; /* Adjust button padding */
+    }
+  }
+  

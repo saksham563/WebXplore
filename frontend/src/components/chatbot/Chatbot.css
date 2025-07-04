@@ -1,0 +1,186 @@
+/* Container for the chatbot */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+/* Chatbot Window */
+.chatbot-window {
+  width: 450px; /* Increased width of the chatbot window */
+  height: 600px; /* Increased height of the chatbot window */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h5 {
+  margin: 0;
+}
+
+.close-btn {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Message Box */
+.message-box {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scroll if needed */
+  max-height: 300px; /* Fixed max height for message box */
+}
+
+/* Individual Messages */
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.message.bot {
+  background-color: #e9ecef;
+  text-align: left;
+}
+
+.message.user {
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+
+/* Message Icon */
+.message-icon {
+  width: 30px; /* Width of the icon */
+  height: 30px; /* Height of the icon */
+  border-radius: 50%;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Predefined Questions Section */
+.questions {
+  max-height: 200px; /* Increased max height for the questions section */
+  overflow-y: auto; /* Enable vertical scroll for questions */
+  margin-top: 10px;
+}
+
+.questions h6 {
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatbot-window {
+    width: 90%; /* Full width on smaller screens */
+    height: 80%; /* Increased height for mobile */
+  }
+
+  .message-box {
+    max-height: 300px; /* Adjust max height for mobile */
+  }
+
+  .questions {
+    max-height: 150px; /* Adjust max height for questions on mobile */
+  }
+
+  .chatbot-icon {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+  }
+}
+
+.imgchat {
+  width: 65px; /* Set desired width */
+  height: 65px; /* Set desired height */
+  display: block;
+  border-radius: 50px;
+}
+.closebtn {
+  width: 30px; /* Set desired width */
+  height: 30px; /* Set desired height */
+  display: block;
+  border-radius: 50px;
+}
+/* New Sections Box */
+.sections {
+  margin-top: 10px;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto; /* Enable vertical scroll if needed */
+  max-height: 200px; /* Fixed max height for section box */
+}
+
+/* Scrollable Questions */
+.scrollable-questions {
+  max-height: 150px; /* Adjust max height for questions */
+  overflow-y: auto; /* Enable vertical scroll for questions */
+}
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.infoimg{
+  height: 20px;
+  width: 20px;
+}

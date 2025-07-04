@@ -1,0 +1,80 @@
+.crd {
+  transition: all 0.3s;
+}
+
+.crd:hover {
+  transform: scale(1.04);
+}
+
+.sec {
+  transition: all 0.3s;
+}
+
+.sec:hover {
+  transform: scale(1.02);
+}
+
+.keyfeatureimg{
+  /* position: absolute;  */
+    top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    right: 0; /* Cover the right */
+    bottom: 0; /* Cover the bottom */
+    background-image: url('../../assets/heroimg.png'); /* Ensure the correct path to your image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1.5s forwards; /* Fade in animation */
+}
+
+.headingtext{
+  font-size: 4rem;
+}
+
+.cardtitle{
+  font-size: 2rem;
+}
+
+.maincard{
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .headingtext  {
+    font-size: 2rem; /* Smaller font on smaller screens */
+  }
+  .cardtitle{
+    font-size: 1.25rem;
+  }
+  .testmonheading{
+    font-size: 2rem;
+  }
+
+}
+.testmonheading{
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  
+  .testmonheading{
+    font-size: 2rem;
+  }
+
+}
+
+.lastsection{
+  top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    right: 0; /* Cover the right */
+    bottom: 0; /* Cover the bottom */
+    background-image: url('../../assets/lastsection.png'); /* Ensure the correct path to your image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1.5s forwards; /* Fade in animation */
+}
+
+

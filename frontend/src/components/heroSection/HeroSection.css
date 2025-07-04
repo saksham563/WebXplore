@@ -1,0 +1,119 @@
+/* HeroSection.css */
+.hero-section {
+    position: relative; /* Create a positioning context */
+    color: #fff;
+    min-height: 100vh; /* Full height for the section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 0; /* Adjusted top padding to create space for the header */
+    overflow: hidden; /* Prevent overflow of background image */
+  }
+  
+  
+  /* Fade in animation for the background image */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .hero-title {
+    font-size: 4rem; /* Default for large screens */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: -120px;
+  }
+  
+  /* Updated description styles */
+  .hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.8); /* Start smaller */
+    animation: scaleIn 0.8s forwards; /* Apply animation */
+    animation-delay: 1.5s; /* Start after the heading animation */
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem; /* Smaller font on smaller screens */
+    }
+  
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased space between buttons */
+  }
+  
+  .cntus, .blgpage {
+    background-color: black;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    border: 2px solid white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .cntus:hover, .blgpage:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-5px); /* Add a hover lift effect */
+  }
+  
+  /* Text animation for heading */
+  .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    margin-right: 8px;
+  }
+  
+  /* Animation for heading */
+  .hero-title .word {
+    animation: slideInLeft 0.5s ease-in-out forwards;
+  }
+  
+  /* Keyframes for sliding animation */
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .animate-shimmer {
+    background-size: 2000px 100%;
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite linear;
+  }
+  

@@ -1,0 +1,46 @@
+/* Service Details Page Styles */
+.service-details-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Max container width */
+  }
+  
+  .service-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-weight: 800; /* Make the title bolder */
+    font-size: 2em;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-weight: 600;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5em; /* Smaller title for mobile */
+    }
+  
+    h3 {
+      font-size: 1.2em; /* Adjust heading size */
+    }
+  
+    .service-details-container {
+      padding: 10px;
+    }
+  
+    .service-item {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,160 @@
+/* Container for all cards */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensures two cards per row */
+    gap: 20px; /* Spacing between cards */
+    padding: 40px;
+  }
+  
+  /* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+    .services-container {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on tablets */
+    }
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .services-container {
+      grid-template-columns: 1fr; /* One card per row on mobile screens */
+      padding: 20px; /* Smaller padding on smaller screens */
+    }
+  
+    .service-photo {
+      height: auto; /* Allow image to adjust height proportionally */
+      max-height: 200px; /* Set a maximum height for the image on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-container {
+      padding: 15px; /* Reduced padding on very small screens */
+    }
+  
+    .service-card {
+      padding: 15px; /* Adjust card padding for smaller screens */
+    }
+  
+    .service-photo {
+      max-height: 140px; /* Slightly reduce the image height for very small screens */
+    }
+  }
+  /* Individual service cards */
+  .service-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  /* Add hover effect */
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title styling */
+  .service-title {
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Image wrapper for consistent image sizes */
+  .image-wrapper {
+    width: 100%;
+    height: 45vh; /* Adjust height for better fit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  /* Image styling */
+  .service-photo {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Overview text styling */
+  .service-overview {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Spacing before the button */
+    text-align: justify;
+  }
+  
+  /* Button wrapper for fixed position */
+  .button-wrapper {
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  /* New style for the "Read More" button with icon */
+  .read-more-button {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hover effect */
+  .read-more-button:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  /* Active effect on click */
+  .read-more-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  /* Styling for the icon */
+  .read-more-button svg {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the icon */
+  .read-more-button:hover svg {
+    transform: translateX(220px); /* Moves the icon slightly to the right on hover */
+  }
+  
+  /* Animation for card appearance */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

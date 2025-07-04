@@ -1,0 +1,365 @@
+/* *{
+  user-select: none;
+  } */
+.navbar {
+  background-color: white; /* White background for the navbar */
+}
+
+.img {
+  transition: all 0.3s;
+}
+
+.img:hover {
+  transform: scale(1.15);
+}
+
+.crd {
+  transition: all 0.3s;
+}
+
+.crd:hover {
+  transform: scale(1.08);
+}
+
+.clr {
+  color: red;
+}
+
+/* Main dropdown container */
+.service-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown menu */
+.service-dropdown .dropdown-menu {
+  display: none; /* Hide the dropdown menu by default */
+  position: absolute;
+  top: 100%; /* Position the menu below the dropdown link */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 200px;
+  padding: 10px 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+}
+
+/* Show dropdown menu on hover */
+.service-dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1; /* Fade in effect */
+  visibility: visible; /* Make the menu visible */
+}
+
+/* Style for dropdown links */
+.service-dropdown .dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  display: block; /* Ensure items stack vertically */
+}
+
+/* Hover effect for dropdown items */
+.service-dropdown .dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style for dropdown submenu (for Other Services) */
+.service-dropdown .dropdown-menu .dropdown-submenu {
+  position: relative; /* Ensures the submenu stays in place */
+}
+
+/* Submenu style */
+.service-dropdown .dropdown-menu .dropdown-submenu .submenu {
+  display: none; /* Hide the submenu initially */
+  position: absolute;
+  top: 0; /* Align submenu directly below its parent */
+  left: 100%; /* Position the submenu to the right of its parent item */
+  padding-left: 20px; /* Add padding for readability */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Show submenu when hovering over the "Other Services" item */
+.service-dropdown .dropdown-menu .dropdown-submenu:hover .submenu {
+  display: block;
+  opacity: 1; /* Fade in effect */
+  visibility: visible; /* Make submenu visible */
+  left: 100%; /* Keep the submenu aligned with the right of the parent */
+  top: 0; /* Position it exactly below the "Other Services" item */
+}
+.service-link{
+  text-decoration: none;
+  color: gray;
+}
+.service-link:hover{
+text-decoration: none;
+color: #333;
+}
+/* Style for submenu items */
+.service-dropdown .dropdown-menu .submenu-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  display: block; /* Stack submenu items vertically */
+}
+
+/* Hover effect for submenu items */
+.service-dropdown .dropdown-menu .submenu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown arrow styling */
+.service-dropdown .dropdown-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+
+
+/* General NavLink styling */
+.nav-link {
+  margin-right: 30px; /* Space between links */
+  font-size: 1.2rem; /* Font size for links */
+  color: black; /* Default text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s; /* Smooth color transition */
+  font-weight: bold;
+}
+
+
+.maintext{
+  margin-right: 20px; /* Space between links */
+  font-size: 2.2rem; /* Font size for links */
+  color: black; /* Default text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s; /* Smooth color transition */
+  font-weight: bold;
+  margin-left: 10px;
+}
+.maintext:hover {
+  color: gray; /* Change color on hover */
+  text-decoration: none;
+}
+
+
+.nav-link:hover {
+  color: gray; /* Change color on hover */
+}
+
+.nav-link:last-child {
+  margin-right: 20px; /* Space for the last link */
+}
+
+
+/* Make the search input more attractive */
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input {
+  width: 85%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.search-button {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #333;
+}
+
+.search-recommendations {
+  padding: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-icon:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Search Icon styling */
+.search-icon {
+  color: black; /* Change to black */
+  cursor: pointer;
+  margin-left: 20px; /* Space to the left of the icon */
+}
+
+/* Search box styling */
+.search-box {
+  display: block;
+  position: absolute;
+  top: 100px; /* Adjust position */
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 10px;
+}
+
+.search-box.show {
+  display: block; /* Show the box */
+  opacity: 1; /* Fully opaque */
+  transform: translateY(0); /* Move it back to original position */
+  margin: 10px 0; /* Add some margin to separate from the header */
+  padding: 10px; /* Add some padding */
+  background-color: white; /* Set background color */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Right-aligned NavLink and search box on larger screens */
+@media (min-width: 769px) {
+  .navbar-nav {
+      justify-content: flex-end; /* Align links to the right */
+  }
+}
+
+/* Centered NavLink and search box when collapsed on smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+      justify-content: center; /* Center alignment for links */
+      width: 100%; /* Full width */
+      text-align: center; /* Center text */
+  }
+
+  .search-box {
+      width: 100%; /* Make search box full width */
+      margin-top: 10px; /* Space above the search box */
+  }
+
+  .search-box form {
+      width: 100%; /* Full width form */
+  }
+
+  .nav-link {
+      width: 100%; /* Full width links */
+      margin-bottom: 10px; /* Space between links */
+  }
+
+  .navbar-toggler {
+      border: none; /* Removes the border */
+      outline: none; /* Optional: Removes any focus outline */
+  }
+
+  .navbar-toggler:focus {
+      border: none;
+      outline: none;
+      box-shadow: none; /* Removes focus-related shadow */
+  }
+
+  .navbar-toggler:active {
+      border: none;
+      outline: none;
+      box-shadow: none; /* Removes active state shadow */
+  }
+
+  .navbar-collapse {
+      justify-content: center; /* Ensure center alignment for dropdown content */
+      align-items: center; /* Vertically center the links */
+  }
+
+  .search-icon {
+      display: block; /* Center icon horizontally */
+      margin: 10px auto; /* Center the icon */
+  }
+
+  .search-box {
+      justify-content: center; /* Center the search box */
+      width: 100%; /* Make it span full width */
+  }
+
+  .search-box form {
+      width: 100%; /* Full width form for proper centering */
+  }
+  .maintext{
+    margin-right: 20px; /* Space between links */
+    font-size: 1.5rem; /* Font size for links */
+    color: black; /* Default text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Smooth color transition */
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+.logoheader{
+  height:90%;
+  width: 80px;
+}
+/* .logoheader{
+  height:auto;
+  width: 120px;
+  object-fit: contain;
+}
+.head{
+  height: 120px;
+  overflow: hidden;
+  margin-top: -10px;
+} */
+
+/* Sticky header */
+.sticky-top {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  background-color: white; /* Ensure the background remains visible */
+}
+/* For the sticky header effect */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  transition: all 0.3s ease;
+}
+
+.is-sticky {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow when sticky */
+}

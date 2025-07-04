@@ -1,0 +1,91 @@
+.cookies-container {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .cookies-card {
+    
+    background-color: #333;
+    border: none;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto;  /* This ensures that there are no margin issues causing the card to shift left */
+  }
+  
+ 
+  .cookies-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    color: white;
+  }
+  
+  .last-updated {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #aaa;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .cookies-section {
+    margin-bottom: 30px;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    animation: fadeInRight 1.2s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cookies-title {
+      font-size: 2rem;
+    }
+  
+    .section-heading {
+      font-size: 1.3rem;
+    }
+  
+    .section-text {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,56 @@
+/* ProjectDetails.css */
+.project-details-container {
+    max-width: 800px; /* Max width for the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    border: 1px solid #ddd; /* Border around the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.project-title {
+    font-size: 2em; /* Larger font size for the title */
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+.project-titles{
+    color: black;
+}
+
+.project-image {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.project-overview-title,
+.project-technology-title,
+.project-solution-title,
+.project-results-title {
+    font-size: 1.5em; /* Subheading size */
+    margin: 15px 0 5px; /* Spacing for subheadings */
+    color: black;
+}
+
+.project-overview,
+.project-solution,
+.project-results {
+    font-size: 1em; /* Normal text size */
+    color: #333; /* Darker text color */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.project-technology-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.technology-item {
+    background-color: #f0f0f0; /* Light gray background for technology items */
+    padding: 5px 10px; /* Padding for each item */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0; /* Spacing between items */
+}

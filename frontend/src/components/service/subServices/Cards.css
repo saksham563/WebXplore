@@ -1,0 +1,82 @@
+.full-width-card {
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  
+  /* First card's animation when in view */
+  .full-width-card.animate-card {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Second card's initial state (right to left) */
+  .full-width-card.animate-card-reverse {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  
+  /* Second card's animation when in view */
+  .full-width-card.animate-card-reverse {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* First card text animation (from left to right) */
+  .card-body-content {
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: transform 0.6s ease-out 0.4s, opacity 0.6s ease-out 0.4s;
+  }
+  
+  /* First card text when in view */
+  .card-body-content.animate-text {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Second card text animation (from right to left) */
+  .card-body-content.animate-text-reverse {
+    transform: translateX(50%);
+    opacity: 0;
+    transition: transform 0.6s ease-out 0.4s, opacity 0.6s ease-out 0.4s;
+  }
+  
+  /* When the second card's text is in view */
+  .card-body-content.animate-text-reverse {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Image styling */
+  .full-width-card-image {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  
+  .card-image-section {
+    overflow: hidden;
+  }
+  
+  /* Card title and text */
+  .cardtitle {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+  }
+  
+  /* Hover effect for both cards */
+  .full-width-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .vidcard{
+    height: 58vh;
+    width: 35vw;
+  }

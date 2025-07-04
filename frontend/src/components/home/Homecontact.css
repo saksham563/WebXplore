@@ -1,0 +1,227 @@
+/* Main container for the contact page */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100;
+  }
+  
+  /* Contact Form Section (70%) */
+  .contact-form-container {
+    background-color: #101010; /* Deep black background */
+    color: #f0f0f0; /* Soft white text */
+    flex: 0 0 55%; /* 70% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+  }
+  
+  /* Text above the contact form */
+  .contact-intro {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-intro h2 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .contact-intro p {
+    color: #cccccc; /* Light gray for body text */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+  }
+  
+  /* Box for the form */
+  .contact-form-box {
+    background: rgb(175, 171, 171); /* Gray background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    width: 80%;
+    max-width: 800px;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  
+  /* Form structure */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group label {
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .form-group label:hover {
+    color: #007bff; /* Blue highlight on hover */
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Soft light background */
+    color: #333;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+    transition: all 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+  }
+  
+  textarea.form-input {
+    resize: vertical;
+  }
+  
+  /* Placeholder styling for inputs */
+  .form-input::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+    font-style: italic;
+  }
+  
+  /* Existing Client Section */
+  .client-section {
+    flex: 0 0 45%; /* Take 45% width */
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content takes up full height */
+    min-height: 100%; /* Makes sure client section takes more height */
+  }
+  
+  /* Existing Client Intro */
+  .client-intro {
+    text-align: center;
+    flex-grow: 1; /* Ensures the intro takes more height */
+  }
+  
+  .client-intro h3 {
+    font-size: 3.2rem; /* Much bigger text for the title */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .client-intro p {
+    color: #555;
+    font-size: 1.4rem; /* Less larger description text */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Existing Client logos layout */
+  .client-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; /* Center logos vertically */
+    gap: 20px; /* Space between logos */
+    flex-grow: 4; /* Allow logos to take more height */
+  }
+  
+  .client-logo {
+    width: 140px; /* Slightly larger image size */
+    height: 140px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .client-logo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Make the contact section come first */
+    .contact-form-container {
+      order: 1;
+      width: 100%;
+    }
+  
+    .client-section {
+      order: 2;
+      width: 100%;
+    }
+  
+    .client-images {
+      justify-content: center;
+    }
+  
+    .client-logo {
+      width: 180px; /* Adjust client logo size on smaller screens */
+      height: 220px;
+    }
+  
+    .contact-intro h2 {
+      font-size: 2.4rem; /* Reduced size for smaller screens */
+    }
+  
+    .contact-intro p {
+      font-size: 1rem; /* Smaller description text */
+    }
+  
+    .client-intro h3 {
+      font-size: 2.4rem; /* Adjusted client section heading */
+    }
+  
+    .client-intro p {
+      font-size: 1.2rem; /* Adjusted description size for small screens */
+    }
+  }
+  
+  /* Additional Client Section Styling */
+  .client-section {
+    flex: 0 0 45%; /* Take 45% width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content takes up full height */
+    min-height: 100%; /* Makes sure client section takes more height */
+  }
+  
+  

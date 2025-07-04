@@ -1,0 +1,385 @@
+/* Page Container */
+.case-page-container {
+  padding: 40px;
+  background-color: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Ensures padding is included in the element's width/height */
+}
+
+/* Page Heading */
+.page-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px; /* Adds some padding for smaller screens */
+}
+
+.main-title {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Prevents overflow if the title is too long */
+}
+
+/* Page Description with smooth word-by-word animation */
+.page-description {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px; /* Adds padding to ensure it fits well on smaller screens */
+}
+
+/* Individual Word Animation */
+.animated-word {
+  opacity: 0;
+  display: inline-block;
+  transform: translateX(-20px);
+  animation: wordFadeIn 0.8s forwards ease-in-out;
+}
+
+/* Keyframes for word animation */
+@keyframes wordFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Container */
+.case-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  padding: 0 20px; /* Adds padding to prevent content from touching the edges */
+  box-sizing: border-box;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.open-pdf-button,
+.download-pdf-button {
+  padding: 12px 24px;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.open-pdf-button:hover,
+.download-pdf-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Card */
+.case-card {
+  width: 75%;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s forwards;
+  min-height: 500px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  
+}
+.case-link {
+  text-decoration: none;
+  color: inherit; /* Maintain text color from the card */
+}
+/* Request Case Study Button */
+.download-button {
+background-color: black;
+color: white;
+border: 2px solid black;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+border-radius: 5px;
+}
+
+.download-button:hover {
+background-color: white;
+color: black;
+}
+
+/* Email Form Styles */
+.email-form {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+
+/* Email Input Field */
+.email-form label {
+font-weight: bold;
+font-size: 14px;
+color: black;
+}
+
+.email-form input {
+width: 100%;
+max-width: 400px;
+padding: 10px;
+border: 2px solid black;
+border-radius: 5px;
+font-size: 16px;
+outline: none;
+transition: border-color 0.3s ease;
+}
+
+.email-form input:focus {
+border-color: grey;
+}
+
+/* Submit Button */
+.submit-button {
+background-color: black;
+color: white;
+border: 2px solid black;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+border-radius: 5px;
+}
+
+.submit-button:hover {
+background-color: white;
+color: black;
+}
+
+/* Success and Error Messages */
+.success-message {
+margin-top: 10px;
+color: green;
+font-weight: bold;
+}
+
+.error-message {
+margin-top: 10px;
+color: red;
+font-weight: bold;
+}
+/* Progress Indicator */
+.progress-indicator {
+margin-top: 20px;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+color: #0056b3; /* Subtle blue shade for text */
+}
+
+.progress-bar {
+width: 100%;
+max-width: 400px;
+height: 15px; /* Slightly taller for visibility */
+background: linear-gradient(90deg, #f0f0f0, #d9d9d9);
+border-radius: 10px; /* Rounded corners */
+overflow: hidden;
+margin: 10px auto; /* Center align */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+position: relative; /* For inner gradient animation */
+}
+
+.progress-fill {
+height: 100%;
+background: linear-gradient(
+  to right,
+  #007bff,
+  #0056b3
+); /* Dynamic gradient */
+border-radius: 10px 0 0 10px; /* Rounded corners for the fill */
+transition: width 0.5s ease-in-out; /* Smooth transition for width */
+animation: gradient-animation 1.5s infinite; /* Subtle moving gradient effect */
+}
+
+/* Subtle glowing effect for progress-fill */
+.progress-fill::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background: rgba(255, 255, 255, 0.3);
+opacity: 0.5;
+mix-blend-mode: overlay;
+animation: shimmer 2s infinite;
+}
+
+/* Animation for moving gradient */
+@keyframes gradient-animation {
+0% {
+  background-position: 0% 50%;
+}
+100% {
+  background-position: 100% 50%;
+}
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+0% {
+  transform: translateX(-100%);
+}
+100% {
+  transform: translateX(100%);
+}
+}
+
+/* .case-card:hover {
+  transform: translateY(10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+} */
+
+/* Title */
+.case-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Subtitle */
+.case-subtitle {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+/* Description */
+.case-description {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  line-height: 1.6;
+  word-wrap: break-word; /* Ensures text wraps within the card */
+}
+
+/* List */
+.case-list {
+  list-style-type: disc;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  color:black;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .case-card {
+    width: 90%;
+    padding: 30px; /* Reduces padding on smaller screens */
+  }
+
+  .main-title {
+    font-size: 2.2rem; /* Reduces title size for mobile */
+  }
+
+  .case-title {
+    font-size: 2rem; /* Adjusts case title font size */
+  }
+
+  .page-description {
+    font-size: 1rem; /* Adjusts font size for the description */
+    padding: 0 10px; /* Adds padding for mobile */
+  }
+
+  .case-description {
+    font-size: 1rem; /* Adjusts case description size */
+  }
+
+  .case-list {
+    margin-left: 20px; /* Reduces list margin on mobile */
+    font-size: 1rem; /* Adjusts font size for the list */
+  }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .case-card {
+    width: 95%;
+    padding: 20px; /* Further reduces padding on extra small screens */
+  }
+
+  .main-title {
+    font-size: 2rem; /* Further reduces title size */
+  }
+
+  .case-title {
+    font-size: 1.8rem; /* Adjusts case title font size */
+  }
+
+  .page-description {
+    font-size: 0.9rem; /* Reduces font size for the description */
+  }
+
+  .case-description {
+    font-size: 0.9rem; /* Further reduces case description size */
+  }
+
+  .case-list {
+    margin-left: 15px; /* Further reduces list margin */
+    font-size: 0.9rem; /* Further adjusts font size for the list */
+  }
+}
+.case-link:hover {
+  text-decoration: none;
+  color: inherit; /* Maintain text color from the card */
+}
+
+.bgimg{
+
+  top: 0; /* Cover the top */
+  left: 0; /* Cover the left */
+  right: 0; /* Cover the right */
+  bottom: 0; /* Cover the bottom */
+  background-image: url('../../assets/heroimg.png'); /* Ensure the correct path to your image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s forwards; /* Fade in animation */
+}

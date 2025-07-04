@@ -1,0 +1,155 @@
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in Delay for Title */
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDelay2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Tailwind Custom Animation Classes */
+.animate-fade-in-delay {
+  animation: fadeIn 2.5s ease-out forwards;
+}
+
+.animate-fade-in-delay2 {
+  animation: fadeInDelay 3.5s 0.5s ease-out forwards;
+}
+
+
+.text-white {
+  color: white !important;
+}
+
+.text-neutral-300 {
+  color: #d1d1d1 !important;
+}
+
+/* Ensure text does not overflow and wraps correctly */
+@media (max-width: 640px) {
+  .max-w-3xl {
+    max-width: 90%; /* Allow more width on smaller screens */
+  }
+  .text-neutral-300 {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .max-w-3xl {
+    max-width: 80%; /* Medium screens (tablet) */
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-w-3xl {
+    max-width: 80%; /* Larger screens (desktop) */
+  }
+}
+
+
+
+/* Main Section Styling */
+.service-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+/* Styling for the section title */
+.service-title {
+  padding: 40px;
+  background-color: #0B0B0F;
+  color: white;
+  text-align: center;
+}
+
+/* Card Styling */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  background-color: #2C2C2E;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  margin: 20px 0;
+}
+
+/* Image inside card (background) */
+.service-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5; /* Make image slightly transparent */
+}
+
+/* Card content (text) */
+.service-card div {
+  position: relative;
+  z-index: 10;
+  padding: 40px;
+  color: white;
+}
+
+/* Card Hover Effects */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+.service-card button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #2980b9;
+}
+
+/* Ensure cards take full width on mobile screens */
+@media (max-width: 768px) {
+  .service-card {
+    max-width: 100%;
+  }
+}
+
+/* No gaps between sections */
+.service-section {
+  padding: 0;
+}

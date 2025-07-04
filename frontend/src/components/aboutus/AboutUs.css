@@ -1,0 +1,248 @@
+/* General Styling */
+.about-us-page {
+  font-family: "Arial", sans-serif;
+}
+
+.about-header {
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+}
+
+.about-main-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  animation: fadeInDown 1s ease;
+}
+
+.about-us-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-us-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Key Points Section */
+.key-points-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.key-point {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.key-point.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.key-point-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.key-point-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.key-point-description {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.key-point-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.key-point-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6c757d;
+}
+.key-point-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.key-point-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.key-point-icon {
+  margin-bottom: 10px;
+}
+
+.key-point-title {
+  font-weight: bold;
+  color: #333333;
+}
+
+.key-point-description {
+  color: #555555;
+  font-size: 14px;
+}
+
+
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.team-social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.team-social-icons a:hover {
+  color: #007bff;
+}
+/* About Header Section Styling */
+.about-header-section {
+  background: linear-gradient(145deg, #1c1c1c, #2a2a2a); /* Blackish gradient for depth */
+  color: #e0e0e0;
+  padding: 5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  overflow: hidden; /* Ensures animations remain clean */
+}
+
+.about-header-title {
+  font-size: 5rem; /* Much bigger font size for the title */
+  font-family: 'Arial', sans-serif; /* Arial for a clean, modern look */
+  font-weight: bold;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+.animate-title {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-in-out forwards;
+  margin: 0 5px;
+}
+
+.animate-title:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animate-title:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.animate-title:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.about-header-tagline {
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  color: #bfbfbf;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 1s; /* Delayed after the title */
+}
+
+.about-header-description {
+  font-size: 1.1rem;
+  font-family: 'Arial', sans-serif;
+  color: #d6d6d6;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 1.5s; /* Delayed after tagline */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header-title {
+    font-size: 3.5rem; /* Adjusted for smaller screens */
+  }
+
+  .about-header-tagline {
+    font-size: 1.3rem;
+  }
+
+  .about-header-description {
+    font-size: 1rem;
+  }
+}

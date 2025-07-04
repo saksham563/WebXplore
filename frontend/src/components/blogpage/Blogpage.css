@@ -1,0 +1,258 @@
+.hh {
+  transition: all 0.3s;
+}
+
+.hh:hover {
+  transform: scale(1.08);
+}
+
+.vid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.tex{
+  font-size: 3.3rem;
+}
+
+/* Loading container styling */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 1.2rem;
+}
+.blogone{
+  height: 42vh;
+  width: 20vw;
+}
+/* Spinner animation styling */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.8s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-20px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.read-more-btn {
+  width: 80%; /* Set width to match requirements */
+  padding: 10px; /* Padding for better touch target */
+  background-color: black; /* Default background color */
+  color: white; /* Default text/icon color */
+  border: 2px solid white; /* White outline */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Smooth transition for background, text, and border colors */
+  display: inline-flex; /* Align items inline */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Button hover effect */
+.read-more-btn:hover {
+  background-color: white; /* Change background to white on hover */
+  color: black; /* Change text/icon color to black */
+  border-color: black; /* Change outline to black */
+}
+/* Modal styling to take 70% width and height */
+.custom-modal .modal-dialog {
+  max-width: 70%;
+  height: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Ensure modal content stretches vertically */
+.custom-modals .modal-content {
+  transform: scale(0.5); /* Start smaller */
+  opacity: 0; /* Start fully transparent */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.custom-modal.show .modal-content {
+  transform: scale(1); /* Scale to full size */
+  opacity: 1; /* Fade in */
+}
+/* Comments section inside the modal */
+.custom-modal .modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Scrollable comment box */
+.comment-box {
+  flex-grow: 1; /* Takes up all available space above the form */
+  overflow-y: auto; /* Only allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  height: 60vh;
+}
+.comment-icon-btn {
+  width: 80%; /* Match the width of the Read More button */
+  padding: 10px; /* Padding for better touch target */
+  background-color: black; /* Default background color */
+  color: white; /* Default text/icon color */
+  border: 2px solid white; /* White outline */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Smooth transition for background, text, and border colors */
+  display: flex; /* Align icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  margin-top: 10px;/* Space between buttons */ /* Space between buttons */
+  transition: all 0.3s;
+}
+.comment-icon-btn:hover {
+  background-color: white; /* Change background to white on hover */
+  color: black; /* Change text/icon color to black */
+  border-color: black; 
+  transform: scale(1.08);
+}
+/* Each comment item */
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  word-wrap: break-word; /* Ensure text breaks within the width */
+  max-width: 100%;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.text-left h1{
+  color: black;
+}
+
+/* Icon or symbol for each comment */
+.comment-icon {
+  margin-right: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Comment text styling */
+.comment-text {
+  flex-grow: 1;
+  word-wrap: break-word; /* Prevents text overflow */
+  white-space: normal; /* Ensures long words wrap to the next line */
+  /* width: 60vw; */
+  overflow:auto;
+}
+
+/* Animation for modal appearance */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Comment Icon padding below Read More button */
+.comment-icon-wrapper {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Style for the Submit button */
+button.submit-btn {
+  display: block;
+  width: 50%; /* Initial width */
+  margin: 0 auto; /* Center the button */
+  padding: 10px 20px;
+  border: none; /* Remove Bootstrap border */
+  border-radius: 30px;
+  background-color: #C33764 ; /* Initial background color */
+  color: white !important; /* Set text color */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: width 0.4s ease, background-color 0.5s; /* Smooth width transition and background color change */
+}
+
+/* Hover effect for the button */
+button.submit-btn:hover {
+  width: 70%; /* Expands to 70% of the modal width */
+  background: linear-gradient(to right, #C33764   , #1D2671) !important; /* Gradient color change from left to right */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Animation for color gradient during hover */
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enable the gradient transition when hovering */
+button.submit-btn:hover {
+  animation: gradientChange 0.5s ease forwards;
+}
+
+/* Ensure text color remains white on hover */
+button.submit-btn:hover {
+  color: white !important; /* Prevent Bootstrap from changing text color */
+}
+.abc{
+  height: 80%;
+  background-color: white;
+}

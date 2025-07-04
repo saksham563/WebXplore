@@ -1,0 +1,17 @@
+.banner {
+    background-color: rgb(181, 184, 186); /* Or any yellow you prefer */
+    background-image: url('path-to-your-image.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 40px 0;
+  }
+  
+  h2 {
+    color: white;
+    font-weight: bold;
+  }
+  
+  button {
+    font-weight: bold;
+  }
