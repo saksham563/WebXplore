@@ -74,7 +74,7 @@ const AboutUs = () => {
             <span className="animate-title">Studio</span>
           </h1>
           <p className="about-header-tagline animate-description">
-            Your Trusted Partner in Digital Innovation
+            Your Trusted Partner in Digital Innovation hi 
           </p>
           <p className="about-header-description animate-description">
             At WebXplore Studio, we excel in delivering transformative digital solutions
